@@ -4,12 +4,12 @@ EntityEvents.death(event => {
 
     const player = event.entity;
     const level = event.level;
-    console.log(player.getX())
+    // console.log(player.getX())
 
     const headItem = level.createEntity('minecraft:item')
     headItem.mergeNbt({Item:{id:"minecraft:player_head", Count:1, tag: {SkullOwner: player.username}}})
 
-    const boneCount = Math.cell(Math.random() * 4)
+    const boneCount = Math.ceil(Math.random() * 4)
     const boneItem = level.createEntity('minecraft:item')
     boneItem.mergeNbt({Item:{id:"minecraft:bone", Count:boneCount}})
 
