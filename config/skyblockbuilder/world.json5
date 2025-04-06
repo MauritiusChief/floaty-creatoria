@@ -6,9 +6,7 @@
   "biomes": {
     "minecraft:overworld": {
       "allow_list": false,
-      "elements": [
-        "minecraft:*ocean*"
-      ]
+      "elements": []
     },
     "minecraft:the_nether": {
       "allow_list": false,

@@ -19,8 +19,6 @@
   // This is a resource list. See https://moddingx.org/libx/org/moddingx/libx/util/data/ResourceList.html#use_resource_lists_in_configs
   "generationStructures": {
     "allow_list": true,
-    "elements": [
-      "minecraft:fortress"
-    ]
+    "elements": []
   }
 }
