@@ -205,6 +205,10 @@ minecraft:warped_forest_vegetation_bonemeal
 minecraft:warped_fungus
 minecraft:warped_fungus_planted
 minecraft:weeping_vines
+supplementaries:basalt_ash
+supplementaries:cave_urns
+supplementaries:road_sign
+supplementaries:wild_flax
 waystones:mossy_waystone
 waystones:sandy_waystone
 waystones:waystone
