@@ -3,7 +3,7 @@ LevelEvents.tick(event => {
     const level = event.level;
 
     level.getEntities().forEach( entity => {
-        if (entity.type != "minecraft:item") return;
+        if (entity.type != "minecraft:item" && entity.type != "minecraft:experience_orb") return;
         
         if (entity.getY() > -48) return;
 
