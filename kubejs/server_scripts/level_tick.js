@@ -16,42 +16,61 @@ LevelEvents.tick(event => {
             return
         }
 
+        /**forEach处理纸变纸浆 */
+        if (entity.type == "minecraft:item" && (level.isRaining() || level.isThundering()) && // 在下雨
+            level.canSeeSky(entity.blockPosition().above()) &&
+            entity.getNbt().Item.id == "minecraft:paper"
+        ) {
+            // event.server.tell("检测到纸物品")
+            // console.log(paper_nbt)
+            // console.log(level.getBrightness("sky", entity.blockPosition()))
+            if (Math.random() < 0.005) {
+                let paper_nbt_item = entity.getNbt().Item
+                // console.log(paper_nbt_item)
+                entity.mergeNbt({Item:{id:paper_nbt_item.id, Count: paper_nbt_item.Count-1}})
+                let pulpItem = level.createEntity('minecraft:item')
+                pulpItem.mergeNbt({Item:{id:'create:pulp', Count:1}})
+                pulpItem.setPosition(entity.getX(), entity.getY(), entity.getZ())
+                pulpItem.spawn();
+            }
+            return
+        }
+
         /**forEach处理烟花实体 */
         if (entity.type == "minecraft:firework_rocket" && entity.getY() >= 256 &&
             level.getBlock(entity.getBlockX(), entity.getBlockY()+1, entity.getBlockZ()).id == "supplementaries:wind_vane"
         ) {
             // event.server.tell("烟花抵达风向标")
             let firework_nbt = entity.getNbt()
-            if (firework_nbt.Life >= firework_nbt.LifeTime) {
-                // event.server.tell("nbt检测通过")
-                // event.server.tell(firework_explosions)
-                firework_nbt.FireworksItem.tag.Fireworks.Explosions.forEach( explosion => { // 每个explosion对应一个烟火之星
-                    // event.server.tell(explosion.Colors[0])
-                    console.log(explosion.Colors)
-                    explosion.Colors.forEach(color => {
-                        if (color == 2437522) {
-                            event.server.runCommandSilent("weather thunder");
-                            return
-                        }
-                        if (color == 6719955) {
-                            event.server.runCommandSilent("weather rain");
-                            return
-                        }
-                        if (color == 11250603) {
-                            event.server.runCommandSilent("weather clear");
-                            return
-                        }
-                    })
+            if (firework_nbt.Life < firework_nbt.LifeTime) return
+            // event.server.tell("nbt检测通过")
+            // event.server.tell(firework_explosions)
+            firework_nbt.FireworksItem.tag.Fireworks.Explosions.forEach( explosion => { // 每个explosion对应一个烟火之星
+                // event.server.tell(explosion.Colors[0])
+                // console.log(explosion.Colors)
+                explosion.Colors.forEach(color => {
+                    if (color == 2437522) {
+                        event.server.runCommandSilent("weather thunder");
+                        return
+                    }
+                    if (color == 6719955) {
+                        event.server.runCommandSilent("weather rain");
+                        return
+                    }
+                    if (color == 11250603) {
+                        event.server.runCommandSilent("weather clear");
+                        return
+                    }
                 })
-                // 执行到这一行说明没有检测到针对性的颜色，则随机改天气
-                let random_weather = Math.random()
-                if (random_weather > 2.0/3) {
-                    event.server.runCommandSilent("weather thunder");
-                } else if (random_weather > 1.0/3) {
-                    event.server.runCommandSilent("weather rain");
-                } else {
-                    event.server.runCommandSilent("weather clear");
-                }
+            })
+            // 执行到这一行说明没有检测到针对性的颜色，则随机改天气
+            let random_weather = Math.random()
+            if (random_weather > 2.0/3) {
+                event.server.runCommandSilent("weather thunder");
+            } else if (random_weather > 1.0/3) {
+                event.server.runCommandSilent("weather rain");
+            } else {
+                event.server.runCommandSilent("weather clear");
             }
             return
         } 
