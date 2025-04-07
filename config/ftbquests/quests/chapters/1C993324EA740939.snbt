@@ -60,8 +60,8 @@
 				type: "item"
 			}]
 			title: "铜器时代"
-			x: 9.5d
-			y: -2.0d
+			x: 10.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["23F6F6621E17C75A"]
@@ -72,7 +72,7 @@
 				item: "minecraft:lightning_rod"
 				type: "item"
 			}]
-			x: 11.0d
+			x: 11.5d
 			y: -2.0d
 		}
 		{
@@ -363,7 +363,7 @@
 				type: "observation"
 			}]
 			title: "观察溺尸"
-			x: 9.5d
+			x: 9.0d
 			y: -1.0d
 		}
 		{

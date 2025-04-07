@@ -87,7 +87,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 1.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["45A30F1347DE9402"]
@@ -104,7 +104,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			description: ["获得灰烬最好的办法就是在24格外搭建刷怪平台，等待一个晚上，到白天到来时亡灵生物在太阳下燃尽后即可得到灰烬。"]
@@ -116,7 +116,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -2.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -141,7 +141,7 @@
 			}]
 			title: "卷土重来"
 			x: 6.0d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["65A94F6F3291896B"]
@@ -158,7 +158,7 @@
 			}]
 			title: "根系缠绕"
 			x: 6.0d
-			y: 1.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["655BBBB50B2DE0C5"]
@@ -172,7 +172,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["46617C475443BFD2"]
@@ -183,7 +183,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 1.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["46617C475443BFD2"]
@@ -213,8 +213,8 @@
 				}
 				type: "item"
 			}]
-			x: 3.5d
-			y: 3.0d
+			x: 4.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["45A30F1347DE9402"]
@@ -224,8 +224,8 @@
 				item: "farmersdelight:cutting_board"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 2.0d
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			description: [
@@ -243,8 +243,8 @@
 				type: "item"
 			}]
 			title: "真正的“蓝”图"
-			x: 13.25d
-			y: 4.0d
+			x: 13.0d
+			y: 3.5d
 		}
 		{
 			description: ["现在幻翼膜可以代替淡蓝色染料合成蓝图。"]
@@ -256,8 +256,8 @@
 				item: "minecraft:phantom_membrane"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.0d
+			x: 11.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -280,7 +280,7 @@
 			}]
 			title: "宏伟蓝图"
 			x: 11.5d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["099522D51FAEDD90"]
@@ -293,7 +293,7 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -309,7 +309,7 @@
 				type: "item"
 			}]
 			x: 6.5d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["73129B751CF45A0C"]
@@ -333,6 +333,70 @@
 			}]
 			x: 11.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["09C3BC32A38E6E15"]
+			description: [
+				"为了安全地拾取刷怪平台的掉落物，你可以做一套纸板盔甲。"
+				""
+				"在雨天时将纸扔在露天处，便会慢慢变成纸浆。在没有辊压机的情况下，你可以用2个木台阶+3个纸浆合成即可得到1个纸板（木台阶会返还）。"
+			]
+			icon: "create:cardboard"
+			id: "63A6C455E1E7C3FD"
+			subtitle: "也许纸箱子里是一只猫咪？"
+			tasks: [
+				{
+					id: "1E3CA4B0A68426E9"
+					item: {
+						Count: 1
+						id: "create:cardboard_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "333BDD4E63E05257"
+					item: {
+						Count: 1
+						id: "create:cardboard_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "1DDE78384F909E28"
+					item: {
+						Count: 1
+						id: "create:cardboard_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "19800486B67C4F7A"
+					item: {
+						Count: 1
+						id: "create:cardboard_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					match_nbt: false
+					type: "item"
+				}
+			]
+			title: "潜行纸箱"
+			x: 8.5d
+			y: 3.5d
 		}
 	]
 	title: "骨头、苔藓与空岛"

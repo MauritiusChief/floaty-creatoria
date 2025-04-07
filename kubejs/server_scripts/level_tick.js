@@ -24,7 +24,7 @@ LevelEvents.tick(event => {
             // event.server.tell("检测到纸物品")
             // console.log(paper_nbt)
             // console.log(level.getBrightness("sky", entity.blockPosition()))
-            if (Math.random() < 0.005) {
+            if (Math.random() < 0.01) {
                 let paper_nbt_item = entity.getNbt().Item
                 // console.log(paper_nbt_item)
                 entity.mergeNbt({Item:{id:paper_nbt_item.id, Count: paper_nbt_item.Count-1}})
