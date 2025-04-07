@@ -40,6 +40,18 @@ LevelEvents.tick(event => {
 
                     })
                 })
+                // 没有检测到针对性的颜色，则随机改天气
+                let random_weather = Math.random()
+                if (random_weather > 2.0/3) {
+                    event.server.runCommandSilent("weather thunder");
+                    return
+                } else if (random_weather > 1.0/3) {
+                    event.server.runCommandSilent("weather rain");
+                    return
+                } else {
+                    event.server.runCommandSilent("weather clear");
+                    return
+                }
             }
             
 
