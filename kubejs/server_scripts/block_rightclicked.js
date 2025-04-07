@@ -7,7 +7,7 @@ BlockEvents.rightClicked(event => {
     let player = event.player;
 
     if (block.id == "supplementaries:ash" && item.hasTag('minecraft:shovels') &&
-    block.y > -64 && level.getBlock(block.x, block.y - 1, block.z).id == "minecraft:dirt") {
+    block.y > -64 && level.getBlock(block.pos.below()).id == "minecraft:dirt") {
         let blockState = block.getBlockState();
         // console.log(blockState)
         // console.log(blockState.getValue(BlockProperties.LAYERS))
@@ -30,7 +30,7 @@ BlockEvents.rightClicked(event => {
         return
     }
     
-    if (block.id == "minecraft:coarse_dirt" && level.getBlock(block.x, block.y + 1, block.z).id == "minecraft:air" && 
+    if (block.id == "minecraft:coarse_dirt" && level.getBlock(block.pos.above()).id == "minecraft:air" && 
         item.hasTag('minecraft:hoes') && Math.random() < 4.0/5) {
         const pebbleItem = level.createEntity('minecraft:item')
         const pebbleCount = Math.ceil(Math.random()*4)
