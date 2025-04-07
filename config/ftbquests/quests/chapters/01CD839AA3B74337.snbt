@@ -1,0 +1,339 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "01CD839AA3B74337"
+	group: ""
+	icon: "minecraft:bone"
+	id: "01CD839AA3B74337"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"在玩家死亡时，会掉落玩家的头颅和若干根骨头。用4根骨头即可合成骨块，拓展你的生存空间。"
+				""
+				"由于仁慈的虚空模组，在漫长的等待饿死和被幻翼杀死之外，你也可以方便快捷地摔死自己（虽然听起来不那么仁慈）"
+			]
+			id: "587D7B1235C4D3D8"
+			size: 1.5d
+			subtitle: "站在你自己的尸骨上前进吧"
+			tasks: [{
+				id: "03CB8185035AE8C5"
+				item: "minecraft:bone_block"
+				type: "item"
+			}]
+			title: "粉身碎骨"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["587D7B1235C4D3D8"]
+			description: [
+				"现在苔藓块在催熟后可以蔓延到骨块上，进而繁殖更多苔藓块。"
+				""
+				"苔藓块催熟后除了会蔓延，还会生成杜鹃花丛，这是你目前唯一获得木头的方式——用骨粉催熟杜鹃花丛让它长成杜鹃树。"
+				""
+				"你会需要很多骨粉，以及骨头。"
+			]
+			id: "02EAFB3523EC667B"
+			subtitle: "用骨粉催熟苔藓块"
+			tasks: [{
+				id: "2AC6363747B51310"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			title: "初生演替"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["587D7B1235C4D3D8"]
+			description: ["现在物品和经验球在接近虚空时会漂浮，等待你在5分钟之内将它们捡回。"]
+			id: "666B6E4323E0F28C"
+			subtitle: "仁慈的虚空？仁慈的作者！"
+			tasks: [{
+				id: "0DB364BFDDC5EC22"
+				title: "物品也仁慈"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["02EAFB3523EC667B"]
+			description: ["木头的重要性无需多言"]
+			id: "45A30F1347DE9402"
+			subtitle: "来自杜鹃树"
+			tasks: [{
+				id: "57534307492B6624"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45A30F1347DE9402"]
+			id: "65A94F6F3291896B"
+			tasks: [{
+				id: "67D414451491AA9B"
+				item: {
+					Count: 1
+					id: "minecraft:wooden_hoe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["45A30F1347DE9402"]
+			id: "1DA6A8103C34BC29"
+			tasks: [{
+				id: "02AA1D15A93266CE"
+				item: {
+					Count: 1
+					id: "minecraft:wooden_shovel"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			description: ["获得灰烬最好的办法就是在24格外搭建刷怪平台，等待一个晚上，到白天到来时亡灵生物在太阳下燃尽后即可得到灰烬。"]
+			id: "5B02A90A7D228FD0"
+			subtitle: "浴火……成灰"
+			tasks: [{
+				id: "1583FA99D9560898"
+				item: "supplementaries:ash"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"5B02A90A7D228FD0"
+				"1DA6A8103C34BC29"
+				"1AA9BA7BE46529A0"
+			]
+			description: [
+				"将灰烬放到泥土顶上，右键灰烬便有概率消耗灰烬将下方泥土转变为砂土。灰烬层数越高概率越大。"
+				""
+				"&e注意不要点到砂土，否则变成草径之后你的灰烬就白费了。&r"
+			]
+			icon: "minecraft:coarse_dirt"
+			id: "655BBBB50B2DE0C5"
+			subtitle: "将泥土与灰烬混合"
+			tasks: [{
+				id: "4129B801E733927C"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:coarse_dirt"
+				type: "observation"
+			}]
+			title: "卷土重来"
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["65A94F6F3291896B"]
+			description: ["更具体来讲，用锄头右键缠根泥土"]
+			icon: "minecraft:dirt"
+			id: "1AA9BA7BE46529A0"
+			subtitle: "用锄头清理缠根泥土"
+			tasks: [{
+				id: "5156D89450107236"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:dirt"
+				type: "observation"
+			}]
+			title: "根系缠绕"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["655BBBB50B2DE0C5"]
+			description: ["用锄头右键砂土时，有概率产生一个小石子。小石子可用来合成圆石以及沙砾。"]
+			id: "46617C475443BFD2"
+			subtitle: "砂土中有小石子很合理吧"
+			tasks: [{
+				count: 9L
+				id: "635B486ED8171AAC"
+				item: "kubejs:pebble"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["46617C475443BFD2"]
+			id: "3861FDAA9F9EDE9A"
+			tasks: [{
+				id: "5B56375E86463FDE"
+				item: "minecraft:gravel"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["46617C475443BFD2"]
+			description: ["欢迎来到石器时代！"]
+			id: "73129B751CF45A0C"
+			subtitle: "终于……"
+			tasks: [{
+				id: "16BBA1676A0DFEE3"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			title: "石器时代"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45A30F1347DE9402"]
+			id: "538F32279F64937B"
+			tasks: [{
+				id: "616F696A94A073C4"
+				item: {
+					Count: 1
+					id: "minecraft:wooden_axe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["45A30F1347DE9402"]
+			id: "43A39115C41FE35C"
+			tasks: [{
+				id: "3E728BA83F22CC86"
+				item: "farmersdelight:cutting_board"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"如果你一直坚持到从沼泽或者草甸群系的草方块获得花来制作染料……或者更恐怖地从村民交易获得青金石制作染料……我也不会拦着你完成任务。"
+				""
+				"你有这个毅力做什么都会成功的:O"
+			]
+			id: "3EAB890A1A33FD0A"
+			optional: true
+			size: 0.5d
+			subtitle: "毅力惊人"
+			tasks: [{
+				id: "05054A1763CD8671"
+				item: "minecraft:light_blue_dye"
+				type: "item"
+			}]
+			title: "真正的“蓝”图"
+			x: 13.25d
+			y: 4.0d
+		}
+		{
+			description: ["现在幻翼膜可以代替淡蓝色染料合成蓝图。"]
+			icon: "minecraft:phantom_membrane"
+			id: "1FF2FD6D49BC21A2"
+			subtitle: "众所周知，幻翼富含光敏化学物质"
+			tasks: [{
+				id: "61CB3607E05DB11C"
+				item: "minecraft:phantom_membrane"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"1FF2FD6D49BC21A2"
+				"09C3BC32A38E6E15"
+				"3EAB890A1A33FD0A"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"现在你可以站在巨人的肩膀上了。"
+				""
+				"&e注意：如果你有自己的快速建造方法，或者单纯有很多闲暇时间，那么这个任务不是必须的。&r"
+			]
+			id: "276463672B2F282B"
+			subtitle: "抄作业时间到"
+			tasks: [{
+				id: "33B5FB43E00E0A27"
+				item: "create:empty_schematic"
+				type: "item"
+			}]
+			title: "宏伟蓝图"
+			x: 11.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["099522D51FAEDD90"]
+			description: ["农夫乐事添加了一个配方，可以用树皮合成纸（很合理不是么）。"]
+			id: "09C3BC32A38E6E15"
+			subtitle: "让我们说，谢谢农夫"
+			tasks: [{
+				id: "5DB24FBDE47A0768"
+				item: "minecraft:paper"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"538F32279F64937B"
+				"43A39115C41FE35C"
+			]
+			description: ["小技巧：将斧头放在副手，主手拿原木，对准砧板长按右键即可自动去皮。"]
+			id: "099522D51FAEDD90"
+			subtitle: "为什么非要砧板才能获得树皮？"
+			tasks: [{
+				id: "59B2AD0BFAE11C58"
+				item: "farmersdelight:tree_bark"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["73129B751CF45A0C"]
+			id: "019DCB598A718BDD"
+			tasks: [{
+				id: "76A449D6EE1F930A"
+				item: "minecraft:furnace"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["019DCB598A718BDD"]
+			description: ["&e注意：如果你有自己的快速建造方法，或者单纯有很多闲暇时间，那么这个任务不是必须的。&r"]
+			id: "27219FC654A063B7"
+			tasks: [{
+				id: "2B47DD018D13EE6D"
+				item: "minecraft:smooth_stone"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 0.0d
+		}
+	]
+	title: "骨头、苔藓与空岛"
+}
