@@ -42,7 +42,20 @@ LevelEvents.tick(event => {
                 })
             }
             
-            
+
+        } else if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -61 && 
+            !entity.persistentData.getBoolean("lava_triggered") &&
+            level.getBlock(entity.getBlockX(), entity.getBlockY()-1, entity.getBlockZ()).id == "minecraft:lightning_rod" &&
+            level.getBlock(entity.getBlockX(), entity.getBlockY()-2, entity.getBlockZ()).id == "minecraft:cobblestone" &&
+            level.getBlock(entity.getBlockX(), entity.getBlockY()-3, entity.getBlockZ()).id == "minecraft:cauldron"
+        ) {
+            // event.server.tell("检测到闪电")
+            if (Math.random() < 1.0/3){
+                level.getBlock(entity.getBlockX(), entity.getBlockY()-2, entity.getBlockZ()).set("air")
+                level.getBlock(entity.getBlockX(), entity.getBlockY()-3, entity.getBlockZ()).set("lava_cauldron")
+            }
+            entity.persistentData.putBoolean("lava_triggered", true)
+
         }
     })
 })
