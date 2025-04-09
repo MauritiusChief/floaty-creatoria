@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:mud"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.75,
+      "item": "minecraft:mud"
+    },
+    {
+      "chance": 0.25,
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "shovel_dig"
+  }
+}

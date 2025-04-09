@@ -41,4 +41,13 @@ BlockEvents.rightClicked(event => {
         pebbleItem.spawn();
         return
     }
+
+    if (block.id == "minecraft:flower_pot" && item.id == "kubejs:rotten_apple") {
+        item.count--
+        if (Math.random() < 1.0/8) {
+            block.set("potted_oak_sapling")
+        }
+        level.spawnParticles('minecraft:happy_villager', true, block.x + 0.5, block.y + 0.5, block.z + 0.5, 0.2, 0.2, 0.2, 10, 0.1);
+        event.success()
+    }
 })

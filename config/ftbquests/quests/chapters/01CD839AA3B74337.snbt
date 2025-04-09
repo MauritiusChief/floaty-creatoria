@@ -320,8 +320,13 @@
 		}
 		{
 			dependencies: ["019DCB598A718BDD"]
-			description: ["&e注意：如果你有自己的快速建造方法，或者单纯有很多闲暇时间，那么这个任务不是必须的。&r"]
+			description: [
+				"用来合成蓝图桌和蓝图大炮。"
+				""
+				"&e注意：如果你有自己的快速建造方法，或者单纯有很多闲暇时间，那么这个任务不是必须的。&r"
+			]
 			id: "27219FC654A063B7"
+			subtitle: "蓝图？"
 			tasks: [{
 				id: "2B47DD018D13EE6D"
 				item: "minecraft:smooth_stone"
@@ -387,6 +392,11 @@
 						}
 					}
 					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "7225F50A28AFC88F"
+					item: "create:cardboard"
 					type: "item"
 				}
 			]
