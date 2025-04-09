@@ -81,15 +81,27 @@ LevelEvents.tick(event => {
         /**forEach处理闪电实体 */
         if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -61 && 
             !entity.persistentData.getBoolean("lava_triggered") &&
-            level.getBlock(entity.blockPosition().below()).id == "minecraft:lightning_rod" &&
-            level.getBlock(entity.blockPosition().below().below()).id == "minecraft:cobblestone" &&
-            level.getBlock(entity.blockPosition().below().below().below()).id == "minecraft:cauldron"
+            (
+                level.getBlock(entity.blockPosition().below().below()).id == "minecraft:magma_block" || 
+                level.getBlock(entity.blockPosition().below().below()).id == "minecraft:cobblestone"
+            ) &&
+            level.getBlock(entity.blockPosition().below()).id == "minecraft:lightning_rod"
         ) {
+            let entity_below2_block = level.getBlock(entity.blockPosition().below().below())
+            let entity_below3_block = level.getBlock(entity.blockPosition().below().below().below())
             // event.server.tell("检测到闪电")
-            if (Math.random() < 1.0/3){
-                level.getBlock(entity.blockPosition().below().below()).set("air")
-                level.getBlock(entity.blockPosition().below().below().below()).set("lava_cauldron")
+            // 概率岩浆块变岩浆
+            if (
+                entity_below2_block.id == "minecraft:magma_block" && entity_below3_block.id == "minecraft:cauldron"
+            ) {
+                entity_below2_block.set("air")
+                if (Math.random() < 1.0/5) {entity_below3_block.set("lava_cauldron")}
             }
+            // 概率圆石变岩浆块
+            if (entity_below2_block.id == "minecraft:cobblestone" && Math.random() < 1.0/4){
+                entity_below2_block.set("magma_block")
+            }
+
             entity.persistentData.putBoolean("lava_triggered", true)
             level.spawnParticles('minecraft:lava', true, entity.getBlockX() + 0.5, entity.getBlockY() - 1.5, entity.getBlockZ() + 0.5, 0.2, 0.2, 0.2, 20, 1);
             return

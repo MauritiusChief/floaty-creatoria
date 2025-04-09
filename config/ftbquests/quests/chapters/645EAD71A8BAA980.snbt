@@ -7,6 +7,16 @@
 	id: "645EAD71A8BAA980"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		id: "379CAA1E4B04B8D4"
+		size: 1.5d
+		tasks: [{
+			id: "44785AE356A48B61"
+			item: "minecraft:golden_apple"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
 	title: "病毒、食物与财富"
 }
