@@ -31,7 +31,8 @@ BlockEvents.rightClicked(event => {
     }
     
     if (block.id == "minecraft:coarse_dirt" && level.getBlock(block.pos.above()).id == "minecraft:air" && 
-        item.hasTag('minecraft:hoes') && Math.random() < 4.0/5) {
+        (item.hasTag('minecraft:shovels') || item.hasTag('minecraft:hoes')) && Math.random() < 4.0/5
+    ) {
         const pebbleItem = level.createEntity('minecraft:item')
         const pebbleCount = Math.ceil(Math.random()*4)
         pebbleItem.mergeNbt({Item:{id:"kubejs:pebble", Count:pebbleCount}})
