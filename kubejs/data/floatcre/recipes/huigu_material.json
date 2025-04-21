@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bone_block"
+    },
+    "B": {
+      "item": "supplementaries:ash"
+    }
+  },
+  "pattern": [
+    "BA",
+    "AB"
+  ],
+  "result": {
+    "item": "kubejs:huigu_material"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bone_meal"
+    },
+    "B": {
+      "item": "supplementaries:ash"
+    }
+  },
+  "pattern": [
+    "BA",
+    "AB"
+  ],
+  "result": {
+    "item": "supplementaries:ash_brick"
+  },
+  "show_notification": true
+}
