@@ -32,24 +32,25 @@ LevelEvents.tick(event => {
         }
 
         /**forEach处理纸变纸浆 */
-        if (entity.type == "minecraft:item" && (level.isRaining() || level.isThundering()) && // 在下雨
-            level.canSeeSky(entity.blockPosition().above()) &&
-            entity.getNbt().Item.id == "minecraft:paper"
-        ) {
-            // event.server.tell("检测到纸物品")
-            // console.log(paper_nbt)
-            // console.log(level.getBrightness("sky", entity.blockPosition()))
-            if (Math.random() < 0.01) {
-                let paper_nbt_item = entity.getNbt().Item
-                // console.log(paper_nbt_item)
-                entity.mergeNbt({Item:{id:paper_nbt_item.id, Count: paper_nbt_item.Count-1}})
-                let pulpItem = level.createEntity('minecraft:item')
-                pulpItem.mergeNbt({Item:{id:'create:pulp', Count:1}})
-                pulpItem.setPosition(entity.getX(), entity.getY(), entity.getZ())
-                pulpItem.spawn();
-            }
-            return
-        }
+        // 太平庸了，改成吃纸获得纸浆
+        // if (entity.type == "minecraft:item" && (level.isRaining() || level.isThundering()) && // 在下雨
+        //     level.canSeeSky(entity.blockPosition().above()) &&
+        //     entity.getNbt().Item.id == "minecraft:paper"
+        // ) {
+        //     // event.server.tell("检测到纸物品")
+        //     // console.log(paper_nbt)
+        //     // console.log(level.getBrightness("sky", entity.blockPosition()))
+        //     if (Math.random() < 0.01) {
+        //         let paper_nbt_item = entity.getNbt().Item
+        //         // console.log(paper_nbt_item)
+        //         entity.mergeNbt({Item:{id:paper_nbt_item.id, Count: paper_nbt_item.Count-1}})
+        //         let pulpItem = level.createEntity('minecraft:item')
+        //         pulpItem.mergeNbt({Item:{id:'create:pulp', Count:1}})
+        //         pulpItem.setPosition(entity.getX(), entity.getY(), entity.getZ())
+        //         pulpItem.spawn();
+        //     }
+        //     return
+        // }
 
         /**forEach处理烟花实体 */
         if (entity.type == "minecraft:firework_rocket" && entity.getY() >= 256 &&
