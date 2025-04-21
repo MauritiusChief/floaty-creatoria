@@ -45,7 +45,11 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["3BF8BAEC43887041"]
+			dependencies: [
+				"3BF8BAEC43887041"
+				"4176FB0F19E2A75D"
+			]
+			dependency_requirement: "one_completed"
 			id: "385F92247739DF27"
 			tasks: [{
 				id: "52C6764C8F6961C1"
@@ -56,7 +60,11 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3BF8BAEC43887041"]
+			dependencies: [
+				"3BF8BAEC43887041"
+				"4176FB0F19E2A75D"
+			]
+			dependency_requirement: "one_completed"
 			id: "5786499EFF614C66"
 			tasks: [{
 				id: "6421EDEE18E46112"
@@ -78,6 +86,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["52E6A860E42451BB"]
 			id: "319F728688B4D1CD"
 			tasks: [{
 				id: "14625F03B0D7077C"
@@ -88,6 +97,7 @@
 			y: 1.5d
 		}
 		{
+			dependencies: ["319F728688B4D1CD"]
 			id: "1C54385DCB572B1B"
 			tasks: [{
 				id: "37647322AF8C920C"
@@ -129,6 +139,32 @@
 			}]
 			x: 3.5d
 			y: -3.0d
+		}
+		{
+			dependencies: [
+				"019DCB598A718BDD"
+				"0F8215463145D531"
+			]
+			description: ["灰色合金可以用来低效地合成部分装置，也可以通过右键蘑菇柄方块的方式概率获得安山机壳。"]
+			id: "4176FB0F19E2A75D"
+			subtitle: "跳关啦"
+			tasks: [{
+				id: "6D11697080BF4F74"
+				item: "kubejs:huigu_alloy"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			id: "189524E4BE0C8C79"
+			tasks: [{
+				id: "1DA88B4E94B8EDE7"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
 		}
 	]
 	title: "齿轮、应力与工程"

@@ -89,49 +89,31 @@
 		}
 		{
 			dependencies: [
-				"7195685F32A0CF6C"
 				"76C8440969B18A9B"
+				"36158816E2D929BF"
 			]
+			dependency_requirement: "one_completed"
 			icon: "minecraft:golden_apple"
 			id: "7D87916276AF8A9C"
-			tasks: [
-				{
-					id: "7E7A877B29014C9C"
-					item: "minecraft:apple"
-					type: "item"
-				}
-				{
-					id: "39B7A7DEB5355444"
-					item: "minecraft:golden_apple"
-					type: "item"
-				}
-			]
+			subtitle: "远离不了一点"
+			tasks: [{
+				id: "39B7A7DEB5355444"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
 			title: "僵尸科实习医生"
-			x: 5.0d
+			x: 5.5d
 			y: 0.0d
 		}
 		{
 			icon: "minecraft:brewing_stand"
 			id: "4020C2C83560F929"
 			subtitle: "自己酿造虚弱药水"
-			tasks: [
-				{
-					id: "7C47A01DF42278A0"
-					item: {
-						Count: 1
-						id: "minecraft:splash_potion"
-						tag: {
-							Potion: "minecraft:weakness"
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "6C0822D70C7DC64E"
-					item: "minecraft:brewing_stand"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "6C0822D70C7DC64E"
+				item: "minecraft:brewing_stand"
+				type: "item"
+			}]
 			title: "更爆肝？"
 			x: 6.0d
 			y: 1.5d
@@ -148,51 +130,49 @@
 			y: -1.5d
 		}
 		{
-			icon: "minecraft:brown_mushroom"
 			id: "45281E5F38F4034F"
-			tasks: [
-				{
-					id: "2270FB2264EF4660"
-					item: "minecraft:fermented_spider_eye"
-					type: "item"
-				}
-				{
-					id: "5A6E10739451B6F8"
-					item: "minecraft:brown_mushroom"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2270FB2264EF4660"
+				item: "minecraft:fermented_spider_eye"
+				type: "item"
+			}]
 			x: 5.0d
 			y: 2.5d
 		}
 		{
-			id: "0A8F60CBBD4175A5"
-			tasks: [
-				{
-					biome: "minecraft:mushroom_fields"
-					id: "646518BA326C6899"
-					type: "biome"
-				}
-				{
-					id: "7A4273F8F0ED5377"
-					item: "minecraft:mycelium"
-					type: "item"
-				}
-				{
-					id: "426F17524DF5CBB4"
-					item: {
-						Count: 1
-						id: "minecraft:shears"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			title: "蘑菇岛"
+			dependencies: ["7195685F32A0CF6C"]
+			id: "36158816E2D929BF"
+			subtitle: "医生远离我"
+			tasks: [{
+				id: "448AE7184FF1BF6D"
+				item: "minecraft:apple"
+				type: "item"
+			}]
+			title: "是橡树"
 			x: 4.0d
-			y: 3.5d
+			y: 0.0d
+		}
+		{
+			description: ["用金苹果对带有虚弱效果的僵尸村民右键，将其治愈。"]
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/villager/librarian.png"
+				}
+			}
+			id: "60D57E48ACCC55C5"
+			subtitle: "恭喜转正！"
+			tasks: [{
+				id: "003E1FC3232CB86E"
+				observe_type: 5
+				timer: 0L
+				to_observe: "minecraft:villager"
+				type: "observation"
+			}]
+			title: "僵尸科医生"
+			x: 7.5d
+			y: 0.0d
 		}
 	]
 	title: "病毒、食物与财富"

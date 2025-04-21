@@ -84,7 +84,12 @@ LevelEvents.tick(event => {
                         // event.server.tell("weather rain")
                         return
                     }
-                    if (color == 11250603) {
+                    // if (color == 11250603) { // 浅灰色
+                    //     event.server.runCommandSilent("weather clear");
+                    //     // event.server.tell("weather clear")
+                    //     return
+                    // }
+                    if (color == 15790320) { // 白色
                         event.server.runCommandSilent("weather clear");
                         // event.server.tell("weather clear")
                         return

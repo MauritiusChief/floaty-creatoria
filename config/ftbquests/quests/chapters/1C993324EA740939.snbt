@@ -50,10 +50,7 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"19F1C5BC1CBC288E"
-				"27E73009F0E1BFFF"
-			]
+			dependencies: ["19F1C5BC1CBC288E"]
 			dependency_requirement: "one_completed"
 			description: ["……而溺尸在被玩家杀死时有概率掉落铜锭。"]
 			id: "23F6F6621E17C75A"
@@ -158,8 +155,8 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3861FDAA9F9EDE9A"]
-			description: ["与僵尸类似，燧石刀可增加溺尸掉落铜锭的概率。"]
+			dependencies: ["23F6F6621E17C75A"]
+			description: ["与僵尸类似，铜刀可增加溺尸掉落铜锭的概率。"]
 			id: "27E73009F0E1BFFF"
 			optional: true
 			rewards: [{
@@ -167,20 +164,19 @@
 				item: "minecraft:copper_ingot"
 				type: "item"
 			}]
-			subtitle: "为什么不能做铜刀？"
+			subtitle: "小心生锈"
 			tasks: [{
 				id: "21D1F795C2EBE88A"
 				item: {
 					Count: 1
-					id: "farmersdelight:flint_knife"
+					id: "kubejs:copper_knife"
 					tag: {
 						Damage: 0
 					}
 				}
 				type: "item"
 			}]
-			title: "刀耕火种"
-			x: 12.0d
+			x: 11.5d
 			y: -0.5d
 		}
 		{
@@ -218,7 +214,7 @@
 			description: [
 				"当带有烟火之星的烟花火箭正好在256格以上位置的风向标下方自然爆炸（非碰撞导致爆炸）时，将会随机改变天气。"
 				""
-				"若烟火之星的颜色包含&9蓝色&r、&b淡蓝色&r、&7淡灰色&r时，将分别把天气固定切换为&9雷暴&r、&b下雨&r、&7晴天&r。"
+				"若烟火之星的颜色包含&9&l蓝色&r&r、&b&l淡蓝色&r&r、&f&l白色&r&r时，将分别把天气固定切换为&9&l雷暴&r&r、&b&l下雨&r&r、&f&l晴天&r&r。"
 			]
 			icon: "supplementaries:wind_vane"
 			id: "15BE259E449D52A3"
@@ -292,10 +288,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"74221082C92738C3"
-				"3302733E6DBC4496"
-			]
+			dependencies: ["74221082C92738C3"]
 			dependency_requirement: "one_completed"
 			description: [
 				"与僵尸类似，流浪者被玩家杀死时有小概率掉落锌锭。"
@@ -329,28 +322,27 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["76C8440969B18A9B"]
-			description: ["金刀可增加流浪者掉落锌锭的概率。"]
+			dependencies: ["261D0F1CA51D5BCD"]
+			description: ["锌刀可增加流浪者掉落锌锭的概率。"]
 			id: "3302733E6DBC4496"
 			rewards: [{
 				id: "359527790E9AD049"
 				item: "create:zinc_ingot"
 				type: "item"
 			}]
-			subtitle: "也可能是黄铜刀？"
+			subtitle: "小心流浪者补锌过多变聪明"
 			tasks: [{
 				id: "45FCE960E36EE46B"
 				item: {
 					Count: 1
-					id: "farmersdelight:golden_knife"
+					id: "kubejs:zinc_knife"
 					tag: {
 						Damage: 0
 					}
 				}
 				type: "item"
 			}]
-			title: "闪闪发光"
-			x: 14.0d
+			x: 13.0d
 			y: -4.0d
 		}
 		{
@@ -364,7 +356,13 @@
 				""
 				"当然，找到生成流浪者的群系建造刷怪塔也不是不行。"
 			]
-			icon: "minecraft:stray_spawn_egg"
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/skeleton/stray.png"
+				}
+			}
 			id: "74221082C92738C3"
 			subtitle: "转化或刷怪？由你决定"
 			tasks: [{
@@ -382,7 +380,13 @@
 			dependencies: ["5BC829C70E7141EA"]
 			dependency_requirement: "one_completed"
 			description: ["把僵尸泡在水里一段时间便会转化成溺尸……"]
-			icon: "minecraft:drowned_spawn_egg"
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/zombie/drowned.png"
+				}
+			}
 			id: "19F1C5BC1CBC288E"
 			subtitle: "冷水澡有害健康"
 			tasks: [{
@@ -454,7 +458,13 @@
 				""
 				"当然也异常危险。"
 			]
-			icon: "minecraft:nether_brick_fence"
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "supplementaries:textures/map_marker/nether_fortress.png"
+				}
+			}
 			id: "3A5474FCF8C1FE52"
 			subtitle: "找到下界要塞"
 			tasks: [{
@@ -469,7 +479,13 @@
 		{
 			dependencies: ["3A5474FCF8C1FE52"]
 			description: ["目前利用烈焰人的唯一方式是获取其掉落物，未来机械动力会提供方式压榨它们……"]
-			icon: "minecraft:blaze_spawn_egg"
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/blaze.png"
+				}
+			}
 			id: "1C0CCFEB9E3F9185"
 			subtitle: "找到烈焰人……然后击杀"
 			tasks: [{
@@ -489,7 +505,13 @@
 				""
 				"而下界石英……可以用来合成安山岩。"
 			]
-			icon: "minecraft:guardian_spawn_egg"
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/guardian.png"
+				}
+			}
 			id: "54DFFA21D6F0AFFB"
 			subtitle: "获取石英"
 			tasks: [

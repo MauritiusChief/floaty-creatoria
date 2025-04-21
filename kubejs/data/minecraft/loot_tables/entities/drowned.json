@@ -59,7 +59,7 @@
           "predicate": {
             "equipment": {
               "mainhand": {
-                "item": "farmersdelight:flint_knife"
+                "item": "kubejs:copper_knife"
               }
             }
           }

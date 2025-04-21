@@ -10,9 +10,9 @@
 	quests: [
 		{
 			description: [
-				"在玩家死亡时，会掉落玩家的头颅和若干根骨头。用4根骨头即可合成骨块，拓展你的生存空间。"
+				"在玩家死亡时，会掉落玩家的头颅和若干根骨头。用4个头颅即可合成骨块，拓展你的生存空间。"
 				""
-				"由于仁慈的虚空模组，在漫长的等待饿死和被幻翼杀死之外，你也可以方便快捷地摔死自己（虽然听起来不那么仁慈）"
+				"由于仁慈的虚空模组，在漫长的等待饿死和被幻翼杀死之外，你也可以方便快捷地摔死自己（听起来不那么仁慈）"
 			]
 			id: "587D7B1235C4D3D8"
 			size: 1.5d
@@ -115,7 +115,7 @@
 				item: "supplementaries:ash"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 8.0d
 			y: -3.5d
 		}
 		{
@@ -124,19 +124,19 @@
 				"1DA6A8103C34BC29"
 				"1AA9BA7BE46529A0"
 			]
-			description: ["将灰烬放到泥土顶上，右键灰烬便有概率消耗灰烬将下方泥土转变为砂土。灰烬层数越高概率越大。"]
-			icon: "minecraft:coarse_dirt"
+			description: ["将灰烬放到泥土顶上，右键灰烬便有概率消耗一层灰烬将下方泥土转化为灰化土。"]
+			icon: "minecraft:podzol"
 			id: "655BBBB50B2DE0C5"
 			subtitle: "将泥土与灰烬混合"
 			tasks: [{
 				id: "4129B801E733927C"
 				observe_type: 0
 				timer: 0L
-				to_observe: "minecraft:coarse_dirt"
+				to_observe: "minecraft:podzol"
 				type: "observation"
 			}]
 			title: "卷土重来"
-			x: 6.0d
+			x: 6.5d
 			y: -2.0d
 		}
 		{
@@ -153,33 +153,33 @@
 				type: "observation"
 			}]
 			title: "根系缠绕"
-			x: 6.0d
+			x: 6.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["655BBBB50B2DE0C5"]
-			description: ["用锄头或铲子右键砂土时，有概率产生小石子。小石子可用来合成圆石以及沙砾。"]
+			dependencies: ["3861FDAA9F9EDE9A"]
+			description: ["用锄头右键沙砾时，有概率产生小石子。小石子可用来合成圆石。"]
 			id: "46617C475443BFD2"
-			subtitle: "砂土中有小石子很合理吧"
+			subtitle: "枯山水"
 			tasks: [{
 				count: 9L
 				id: "635B486ED8171AAC"
 				item: "kubejs:pebble"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -2.0d
+			x: 14.0d
+			y: -1.5d
 		}
 		{
-			dependencies: ["46617C475443BFD2"]
+			dependencies: ["54A25E21D196EE93"]
 			id: "3861FDAA9F9EDE9A"
 			tasks: [{
 				id: "5B56375E86463FDE"
 				item: "minecraft:gravel"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 0.0d
+			x: 12.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["46617C475443BFD2"]
@@ -192,7 +192,7 @@
 				type: "item"
 			}]
 			title: "石器时代"
-			x: 9.0d
+			x: 14.5d
 			y: 0.0d
 		}
 		{
@@ -308,18 +308,22 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["73129B751CF45A0C"]
+			dependencies: ["172A2A9AB810CE88"]
 			id: "019DCB598A718BDD"
+			subtitle: "没想到吧？"
 			tasks: [{
 				id: "76A449D6EE1F930A"
-				item: "minecraft:furnace"
+				item: "brickfurnace:brick_furnace"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["019DCB598A718BDD"]
+			dependencies: [
+				"019DCB598A718BDD"
+				"73129B751CF45A0C"
+			]
 			description: [
 				"用来合成蓝图桌和蓝图大炮。"
 				""
@@ -403,6 +407,100 @@
 			title: "潜行纸箱"
 			x: 8.5d
 			y: 3.5d
+		}
+		{
+			dependencies: ["5B02A90A7D228FD0"]
+			id: "0F8215463145D531"
+			tasks: [{
+				id: "0B06CAA59329FB4A"
+				item: "kubejs:huigu_material"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["5B02A90A7D228FD0"]
+			description: [
+				"用8块灰烬砖做出砖炉后，你就不再需要骨粉来做灰烬砖了。"
+				""
+				"灰烬砖也是你目前唯一能得到的远程武器。"
+			]
+			id: "172A2A9AB810CE88"
+			subtitle: "骨胶粘合"
+			tasks: [{
+				count: 8L
+				id: "39B4C76D4538D571"
+				item: "supplementaries:ash_brick"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["172A2A9AB810CE88"]
+			id: "34A668BF7743692A"
+			tasks: [{
+				id: "16EAF07FEB528100"
+				item: "supplementaries:ash_bricks"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["34A668BF7743692A"]
+			description: [
+				"当灰烬砖被苦力怕的爆炸破坏时，会被转化成沙砾砖。这是你目前获得沙砾为数不多的方式。"
+				""
+				"（其实代码里写的是不用镐子破坏时得到的都是沙砾砖）"
+			]
+			id: "54A25E21D196EE93"
+			subtitle: "爆炸加工"
+			tasks: [{
+				id: "5631FB949E6710D6"
+				item: "supplementaries:gravel_bricks"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3861FDAA9F9EDE9A"]
+			description: [
+				"现在燧石也可以用来合成石制工具了。"
+				""
+				"顺便一提，沙砾可以通过砧板获得近乎无限的燧石。"
+			]
+			id: "53014222C2AA1826"
+			subtitle: "打制石器"
+			tasks: [{
+				id: "3C1F4A4B7BB3400B"
+				item: "minecraft:flint"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["655BBBB50B2DE0C5"]
+			description: [
+				"骨粉右键灰化土时有概率出现两种蘑菇。"
+				""
+				"棕色蘑菇可以大大降低你对女巫的依赖（你猜为什么），而蘑菇柄方块可以让你提前解锁安山机壳。"
+			]
+			id: "0251AED1D89ECD72"
+			tasks: [{
+				icon: "minecraft:brown_mushroom"
+				id: "0CDF81422B12FEE9"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:brown_mushroom"
+				type: "observation"
+			}]
+			title: "棕色蘑菇"
+			x: 6.5d
+			y: -3.5d
 		}
 	]
 	title: "骨头、苔藓与空岛"
