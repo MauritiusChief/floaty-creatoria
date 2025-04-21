@@ -5,15 +5,30 @@ LevelEvents.tick(event => {
     level.getEntities().forEach( entity => {
 
         /**forEach处理掉物品和经验球掉虚空 */
-        if ((entity.type == "minecraft:item" || entity.type == "minecraft:experience_orb") &&
-            entity.getY() <= -48 && !entity.persistentData.getBoolean("forgiving")
-        ) {
+        if ((entity.type == "minecraft:item" || entity.type == "minecraft:experience_orb") && entity.getY() <= -32) {
             // 物品和经验球不会落入虚空
+            if (!entity.persistentData.getInt("forgiving")) {entity.mergeNbt({NoGravity: true})}
+            let currY =  entity.getY()
             let currYmotion = entity.getMotionY()
-            entity.setMotionY(currYmotion * 0.15)
-            entity.mergeNbt({NoGravity: true})
-            entity.persistentData.putBoolean("forgiving", true)
-            return
+            if (currY > -40 && entity.persistentData.getInt("forgiving") != 1) { // -32 ~ -40 阶段一
+                entity.setMotionY(currYmotion * 0.8)
+                // event.server.tell("阶段一减速")
+                entity.persistentData.putInt("forgiving", 1)
+            } else if (currY <= -40 && currY > -48 && entity.persistentData.getInt("forgiving") != 2) { // -40 ~ -48 阶段二
+                entity.setMotionY(currYmotion * 0.7)
+                // event.server.tell("阶段二减速")
+                entity.persistentData.putInt("forgiving", 2)
+            } else if (currY <= -48 && currY > -56 && entity.persistentData.getInt("forgiving") != 3) { // -48 ~ -56 阶段三
+                entity.setMotionY(currYmotion * 0.6)
+                // event.server.tell("阶段三减速")
+                entity.persistentData.putInt("forgiving", 3)
+            } else if (currY <= -56 && entity.persistentData.getInt("forgiving") != 4) { // -56 以下 阶段四
+                entity.setMotionY(currYmotion * 0.5)
+                // event.server.tell("阶段四减速")
+                entity.persistentData.putInt("forgiving", 4)
+            }
+            
+            // return 继续后面的处理
         }
 
         /**forEach处理纸变纸浆 */

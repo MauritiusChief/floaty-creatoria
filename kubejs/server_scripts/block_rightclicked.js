@@ -20,7 +20,7 @@ BlockEvents.rightClicked(event => {
             } else {
                 block.set('air')
             }
-            level.getBlock(block.x, block.y - 1, block.z).set('coarse_dirt')
+            level.getBlock(block.pos.below()).set('podzol')
         }
         // item.damageValue(1)
 
@@ -30,8 +30,8 @@ BlockEvents.rightClicked(event => {
         return
     }
     
-    if (block.id == "minecraft:coarse_dirt" && level.getBlock(block.pos.above()).id == "minecraft:air" && 
-        (item.hasTag('minecraft:shovels') || item.hasTag('minecraft:hoes')) && Math.random() < 4.0/5
+    if (block.id == "minecraft:gravel" && level.getBlock(block.pos.above()).id == "minecraft:air" && 
+        item.hasTag('minecraft:hoes') && Math.random() < 4.0/5
     ) {
         const pebbleItem = level.createEntity('minecraft:item')
         const pebbleCount = Math.ceil(Math.random()*4)
@@ -48,6 +48,19 @@ BlockEvents.rightClicked(event => {
             block.set("potted_oak_sapling")
         }
         level.spawnParticles('minecraft:happy_villager', true, block.x + 0.5, block.y + 0.5, block.z + 0.5, 0.2, 0.2, 0.2, 10, 0.1);
+        event.success()
+    }
+
+    if (block.id == "minecraft:podzol" && level.getBlock(block.pos.above()).id == "minecraft:air" && item.id == "minecraft:bone_meal") {
+        item.count--
+        if (Math.random() < 1.0/8) {
+            if (Math.random() < 0.5) {
+                level.getBlock(block.pos.above()).set("red_mushroom")
+            } else {
+                level.getBlock(block.pos.above()).set("brown_mushroom")
+            }
+        }
+        level.spawnParticles('minecraft:happy_villager', true, block.x + 0.5, block.y + 1.0, block.z + 0.5, 0.2, 0.2, 0.2, 10, 0.1);
         event.success()
     }
 })

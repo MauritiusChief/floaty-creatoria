@@ -102,20 +102,6 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:entity_properties",
-            "entity": "killer",
-            "predicate": {
-              "equipment": {
-                "mainhand": {
-                  "item": "farmersdelight:golden_knife"
-                }
-              }
-            }
-          }
-        },
-        {
           "condition": "minecraft:killed_by_player"
         },
         {
