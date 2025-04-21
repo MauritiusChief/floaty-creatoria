@@ -6,6 +6,6 @@ StartupEvents.registry("item", (event) => {
     event.create("huigu_material").displayName('灰骨粘质')
     event.create("huigu_alloy").displayName('灰色合金')
 
-    event.create('zinc_knife', 'farmersdelight:knife').displayName('锌刀').tier('gold')
-    event.create('copper_knife', 'farmersdelight:knife').parentModel('farmersdelight:item/golden_knife').displayName('铜刀').tier('gold')
+    event.create('zinc_knife', 'farmersdelight:knife').displayName('锌刀').tier('flint')
+    event.create('copper_knife', 'farmersdelight:knife').displayName('铜刀').tier('stone')
 })

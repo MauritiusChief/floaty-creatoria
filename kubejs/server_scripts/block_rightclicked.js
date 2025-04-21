@@ -63,4 +63,14 @@ BlockEvents.rightClicked(event => {
         level.spawnParticles('minecraft:happy_villager', true, block.x + 0.5, block.y + 1.0, block.z + 0.5, 0.2, 0.2, 0.2, 10, 0.1);
         event.success()
     }
+
+    if (block.id == "minecraft:mushroom_stem" && item.id == "kubejs:huigu_alloy") {
+        item.count--
+        if (Math.random() < 1.0/2) {
+            block.set("create:andesite_casing")
+        }
+        level.playSound(null, block.x + 0.5, block.y + 0.5, block.z + 0.5, 'minecraft:block.netherite_block.place', 'blocks', 0.5, 0.75)
+        level.spawnParticles('supplementaries:ash', true, block.x + 0.5, block.y + 0.5, block.z + 0.5, 0.3, 0.3, 0.3, 5, 0.0);
+        event.success()
+    }
 })
