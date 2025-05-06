@@ -1,0 +1,59 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "A": {
+      "item": "kubejs:filled_frame_11"
+    },
+    "B": {
+      "item": "kubejs:filled_frame_13"
+    },
+    "C": {
+      "item": "kubejs:filled_frame_blocks"
+    },
+    "D": {
+      "item": "kubejs:filled_frame_cat"
+    },
+    "E": {
+      "item": "kubejs:filled_frame_chirp"
+    },
+    "F": {
+      "item": "kubejs:filled_frame_far"
+    },
+    "G": {
+      "item": "kubejs:filled_frame_mall"
+    },
+    "H": {
+      "item": "kubejs:filled_frame_mellohi"
+    },
+    "I": {
+      "item": "kubejs:filled_frame_stal"
+    },
+    "J": {
+      "item": "kubejs:filled_frame_strad"
+    },
+    "K": {
+      "item": "kubejs:filled_frame_wait"
+    },
+    "L": {
+      "item": "kubejs:filled_frame_ward"
+    },
+    "s": {
+      "item": "minecraft:bedrock"
+    },
+    "b": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    " ABC ",
+    "LbbbD",
+    "KbsbE",
+    "JbbbF",
+    " IHG "
+  ],
+  "result": {
+    "count": 12,
+    "item": "minecraft:end_portal_frame"
+  }
+}
