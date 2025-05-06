@@ -106,6 +106,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["1C0CCFEB9E3F9185"]
 			icon: "minecraft:brewing_stand"
 			id: "4020C2C83560F929"
 			subtitle: "自己酿造虚弱药水"
@@ -130,14 +131,16 @@
 			y: -1.5d
 		}
 		{
+			dependencies: ["0251AED1D89ECD72"]
 			id: "45281E5F38F4034F"
+			size: 0.75d
 			tasks: [{
 				id: "2270FB2264EF4660"
 				item: "minecraft:fermented_spider_eye"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 2.5d
+			x: 6.75d
+			y: 1.875d
 		}
 		{
 			dependencies: ["7195685F32A0CF6C"]
@@ -148,11 +151,17 @@
 				item: "minecraft:apple"
 				type: "item"
 			}]
-			title: "是橡树"
 			x: 4.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"7D87916276AF8A9C"
+				"300E1FA0FFFA5D53"
+				"4020C2C83560F929"
+				"45281E5F38F4034F"
+			]
+			dependency_requirement: "one_completed"
 			description: ["用金苹果对带有虚弱效果的僵尸村民右键，将其治愈。"]
 			icon: {
 				Count: 1

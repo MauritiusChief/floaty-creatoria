@@ -10,6 +10,7 @@
 	quests: [
 		{
 			dependencies: ["2A702DDD55410F84"]
+			description: ["自此你已进入自由发展的阶段，任务将不再能提供详细的指导，只能为你提供大概的指引。接下来的路就由你自己探索了。"]
 			id: "3BF8BAEC43887041"
 			size: 1.5d
 			subtitle: "欢迎来到机械动力！"
@@ -153,10 +154,11 @@
 				item: "kubejs:huigu_alloy"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -1.0d
+			x: 0.5d
+			y: -1.5d
 		}
 		{
+			dependencies: ["385F92247739DF27"]
 			id: "189524E4BE0C8C79"
 			tasks: [{
 				id: "1DA88B4E94B8EDE7"

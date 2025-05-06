@@ -100,29 +100,32 @@ LevelEvents.tick(event => {
         } 
         
         /**forEach处理闪电实体 */
-        if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -61 && 
+        if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -62 && 
             !entity.persistentData.getBoolean("lava_triggered") &&
-            (
-                level.getBlock(entity.blockPosition().below().below()).id == "minecraft:magma_block" || 
-                level.getBlock(entity.blockPosition().below().below()).id == "minecraft:cobblestone"
-            ) &&
+            level.getBlock(entity.blockPosition().below().below()).id == "create:basin" &&
             level.getBlock(entity.blockPosition().below()).id == "minecraft:lightning_rod"
         ) {
-            let entity_below2_block = level.getBlock(entity.blockPosition().below().below())
-            let entity_below3_block = level.getBlock(entity.blockPosition().below().below().below())
+            let basinBlock = level.getBlock(entity.blockPosition().below().below())
             // event.server.tell("检测到闪电")
-            // 概率岩浆块变岩浆
-            if (
-                entity_below2_block.id == "minecraft:magma_block" && entity_below3_block.id == "minecraft:cauldron"
-            ) {
-                entity_below2_block.set("air")
-                if (Math.random() < 1.0/5) {entity_below3_block.set("lava_cauldron")}
+            let basinData = basinBlock.getEntityData()
+            // console.log(basinData)
+            let cobblestone = basinData.InputItems.Items.find(item => item.id === "minecraft:cobblestone");
+            if (cobblestone) {
+                cobblestone.Count--;
+                let lavaTank = basinData.OutputTanks.find(tank => tank.TankContent.FluidName === "minecraft:lava");
+                let emptyTank = basinData.OutputTanks.find(tank => tank.TankContent.FluidName === "minecraft:empty");
+                if (lavaTank) {
+                    lavaTank.Level.Target += 0.05;
+                    lavaTank.Level.Value += 0.05;
+                    lavaTank.TankContent.Amount += 50;
+                } else if (emptyTank) {
+                    emptyTank.TankContent.FluidName = "minecraft:lava"
+                    emptyTank.Level.Target = 0.05;
+                    emptyTank.Level.Value = 0.05;
+                    emptyTank.TankContent.Amount = 50;
+                }
             }
-            // 概率圆石变岩浆块
-            if (entity_below2_block.id == "minecraft:cobblestone" && Math.random() < 1.0/4){
-                entity_below2_block.set("magma_block")
-            }
-
+            basinBlock.setEntityData(basinData)
             entity.persistentData.putBoolean("lava_triggered", true)
             level.spawnParticles('minecraft:lava', true, entity.getBlockX() + 0.5, entity.getBlockY() - 1.5, entity.getBlockZ() + 0.5, 0.2, 0.2, 0.2, 20, 1);
             return
