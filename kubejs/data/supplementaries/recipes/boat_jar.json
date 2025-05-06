@@ -1,0 +1,89 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "supplementaries:jar"
+  },
+  "loops": 1,
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "supplementaries:jar"
+        },
+        {
+          "tag": "minecraft:boats"
+        }
+      ],
+      "results": [
+        {
+          "item": "supplementaries:jar"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "supplementaries:jar"
+        },
+        {
+          "item": "minecraft:stick"
+        }
+      ],
+      "results": [
+        {
+          "item": "supplementaries:jar"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "supplementaries:jar"
+        },
+        {
+          "item": "create:white_sail"
+        }
+      ],
+      "results": [
+        {
+          "item": "supplementaries:jar"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "supplementaries:jar"
+        },
+        {
+          "amount": 250,
+          "fluid": "minecraft:water",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "supplementaries:jar"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "supplementaries:jar"
+  },
+  "results": [
+    {
+      "item": "supplementaries:jar_boat"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "jar"
+    }
+  ]
+}
