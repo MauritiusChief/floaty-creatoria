@@ -78,8 +78,8 @@
 				item: "minecraft:lightning_rod"
 				type: "item"
 			}]
-			x: 12.0d
-			y: -2.0d
+			x: 11.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -111,8 +111,8 @@
 		{
 			dependencies: [
 				"5F58E0F48C0F08A3"
-				"57C65DBFA638EED6"
 				"73129B751CF45A0C"
+				"162D7DDC3029BA44"
 			]
 			id: "6E4FFC1D2F91CFBD"
 			subtitle: "雷公助我！"
@@ -549,6 +549,18 @@
 			title: "安第斯山脉的荣耀"
 			x: 11.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["12C6B8F429992C6A"]
+			description: ["在海洋群系中钓鱼将有概率获得海带."]
+			id: "6BF94C7056F30193"
+			tasks: [{
+				id: "04E41A77A9CE5C88"
+				item: "minecraft:kelp"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.5d
 		}
 	]
 	title: "锻铁、雨水与熔岩"

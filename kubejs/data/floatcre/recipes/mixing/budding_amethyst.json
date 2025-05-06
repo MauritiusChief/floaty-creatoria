@@ -2,20 +2,19 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "item": "create:rose_quartz"
-    },
-    {
       "item": "minecraft:amethyst_block"
     },
     {
       "amount": 1000,
-      "fluid": "minecraft:water",
-      "nbt": {}
+      "fluid": "create:potion",
+      "nbt": {
+        "Bottle": "REGULAR",
+        "Potion": "minecraft:strength"
+      }
     }
   ],
   "results": [
     {
-      "chance": 0.125,
       "item": "minecraft:budding_amethyst"
     }
   ]

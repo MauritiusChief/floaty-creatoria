@@ -147,6 +147,7 @@
 				"0F8215463145D531"
 			]
 			description: ["灰骨材料可以用来低效地合成部分装置，也可以通过右键蘑菇柄方块的方式概率获得安山机壳。"]
+			hide_dependent_lines: true
 			id: "4176FB0F19E2A75D"
 			subtitle: "跳关啦"
 			tasks: [{
@@ -167,6 +168,249 @@
 			}]
 			x: 6.5d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1C0CCFEB9E3F9185"
+				"319F728688B4D1CD"
+			]
+			id: "6637A5E0E6984ABB"
+			tasks: [{
+				id: "2ED5460E8AD49992"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4839AFF613C1FF23"]
+			id: "33507A9A80CE1F55"
+			tasks: [{
+				id: "1DA036F67C62DA9C"
+				item: "minecraft:soul_soil"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6637A5E0E6984ABB"]
+			id: "0A1A8EF7297E1E3A"
+			tasks: [{
+				id: "7D384A5E3FCC947D"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			description: ["实际上你有很多方式获得下界石英和红石，使用JEI探索一下吧。"]
+			id: "4CB9EB3D0511911D"
+			tasks: [{
+				id: "764DEAB0539AE183"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["319F728688B4D1CD"]
+			id: "2E66D30EACDCCDAB"
+			tasks: [{
+				id: "7B0D5EA5F837AADC"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["319F728688B4D1CD"]
+			id: "488B0DC17256EE4F"
+			tasks: [{
+				id: "23BC49306F7DDF7B"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"3BF8BAEC43887041"
+				"4176FB0F19E2A75D"
+			]
+			dependency_requirement: "one_started"
+			id: "162D7DDC3029BA44"
+			tasks: [{
+				id: "19ADE3DAB97C8690"
+				item: "create:basin"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3BF8BAEC43887041"
+				"4176FB0F19E2A75D"
+			]
+			dependency_requirement: "one_started"
+			id: "798D30EA998BA5C3"
+			tasks: [{
+				id: "11831E31961B275B"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"4CB9EB3D0511911D"
+				"0A1A8EF7297E1E3A"
+			]
+			id: "7A11BB8AABE39FF4"
+			shape: "circle"
+			tasks: [{
+				id: "1195CC1C12D3757C"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0A1A8EF7297E1E3A"
+				"4CB9EB3D0511911D"
+			]
+			id: "7A1097523F1A244B"
+			tasks: [{
+				id: "3F48D26DF7BC1F96"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7A1097523F1A244B"]
+			id: "232160FB20A1F24E"
+			tasks: [{
+				id: "68EC69E151D4C7EB"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2BDFBBBC590B1798"]
+			id: "0447BF0B350293A6"
+			rewards: [{
+				count: 64
+				id: "19B6B7E3E3C0AE4C"
+				item: "create:copper_nugget"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6FD15B04134DBA41"
+				item: "create:veridium"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1A5FA34BCE1542DD"]
+			id: "4990CD41229F16EC"
+			rewards: [{
+				count: 32
+				id: "0292D57AA7E1811E"
+				item: "create:zinc_nugget"
+				type: "item"
+			}]
+			tasks: [{
+				id: "330E584FEADB253A"
+				item: "create:asurine"
+				type: "item"
+			}]
+			x: 11.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4CB9EB3D0511911D"]
+			id: "0017743C4C99F46F"
+			rewards: [{
+				count: 6
+				id: "3291012327C06FAF"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			tasks: [{
+				id: "14EF791C6087AF68"
+				item: "minecraft:budding_amethyst"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["33507A9A80CE1F55"]
+			description: ["原版特性中，流至灵魂土上方且与蓝冰相邻的熔岩会转变成玄武岩。"]
+			id: "2BDFBBBC590B1798"
+			tasks: [{
+				id: "25893FB2E39A6E48"
+				item: "minecraft:basalt"
+				type: "item"
+			}]
+			x: 8.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["33507A9A80CE1F55"]
+			id: "1A5FA34BCE1542DD"
+			tasks: [{
+				id: "0B82097593A83BCC"
+				item: "minecraft:calcite"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4990CD41229F16EC"
+				"232160FB20A1F24E"
+			]
+			id: "681C35374A6CE3F2"
+			tasks: [{
+				id: "19C1A3D2D549885A"
+				item: "create:crushed_raw_zinc"
+				type: "item"
+			}]
+			title: "再生锌"
+			x: 14.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"0447BF0B350293A6"
+				"232160FB20A1F24E"
+			]
+			id: "00606FA638C79136"
+			tasks: [{
+				id: "6B6D7D2DCEE10D3E"
+				item: "create:crushed_raw_copper"
+				type: "item"
+			}]
+			title: "再生铜"
+			x: 14.5d
+			y: -3.0d
 		}
 	]
 	title: "齿轮、应力与工程"

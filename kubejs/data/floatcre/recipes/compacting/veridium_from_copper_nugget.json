@@ -2,7 +2,7 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "item": "minecraft:polished_basalt"
+      "item": "minecraft:smooth_basalt"
     },
     {
       "item": "create:copper_nugget"

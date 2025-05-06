@@ -183,6 +183,26 @@
 			x: 7.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["60D57E48ACCC55C5"]
+			description: ["你已经证明了你强大的生产力与获得财富的能力。"]
+			id: "47D4946A13930709"
+			rewards: [{
+				count: 64
+				id: "59C7FB1C33E6C282"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			subtitle: "财源滚滚"
+			tasks: [{
+				count: 64L
+				id: "6744D9C90A706C82"
+				item: { Count: 64, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
 	]
 	title: "病毒、食物与财富"
 }
