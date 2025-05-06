@@ -32,7 +32,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -1.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["5786499EFF614C66"]
@@ -42,8 +42,8 @@
 				item: "create:mechanical_press"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.5d
+			x: 5.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -84,7 +84,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: 0.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["52E6A860E42451BB"]
@@ -166,8 +166,8 @@
 				item: "create:mechanical_drill"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 0.0d
+			x: 3.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -309,7 +309,10 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["2BDFBBBC590B1798"]
+			dependencies: [
+				"2BDFBBBC590B1798"
+				"52E6A860E42451BB"
+			]
 			id: "0447BF0B350293A6"
 			rewards: [{
 				count: 64
@@ -326,7 +329,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1A5FA34BCE1542DD"]
+			dependencies: [
+				"1A5FA34BCE1542DD"
+				"52E6A860E42451BB"
+			]
 			id: "4990CD41229F16EC"
 			rewards: [{
 				count: 32
@@ -340,7 +346,7 @@
 				type: "item"
 			}]
 			x: 11.5d
-			y: -1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4CB9EB3D0511911D"]
@@ -369,7 +375,7 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: -1.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["33507A9A80CE1F55"]
@@ -410,6 +416,47 @@
 			}]
 			title: "再生铜"
 			x: 14.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"7D4DFC4652BE32AB"
+				"4FA5FC76A0E51A08"
+			]
+			description: [
+				"在潜影盒的正中央放置1个末影珍珠，然后围绕其放置8个末地石，将这个潜影盒放置在避雷针下方，等闪电劈下潜影盒便会复活为潜影贝。"
+				""
+				"&7&o（更具体来讲，末影珍珠放置在Slot 13；末地石放置在Slot 3, 4, 5, 12, 14, 21, 22, 23）&r&r"
+			]
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:textures/entity_icon/shulker/shulker.png"
+				}
+			}
+			id: "7AC2B5421B814CE1"
+			tasks: [{
+				id: "539F435CC7F04DB3"
+				observe_type: 5
+				timer: 0L
+				to_observe: "minecraft:shulker"
+				type: "observation"
+			}]
+			title: "弗兰肯斯盒"
+			x: 8.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["52E6A860E42451BB"]
+			description: ["由于末地门已是最终目标，故为末地石添加了合成配方。"]
+			id: "7D4DFC4652BE32AB"
+			tasks: [{
+				id: "05AD4AB2BFF7C2FE"
+				item: "minecraft:end_stone"
+				type: "item"
+			}]
+			x: 7.0d
 			y: -3.0d
 		}
 	]

@@ -173,7 +173,7 @@
 				type: "item"
 			}]
 			x: 11.5d
-			y: -0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -564,13 +564,18 @@
 		}
 		{
 			dependencies: ["5F58E0F48C0F08A3"]
-			description: ["现在被闪电杀死的海龟会掉落潜影壳而不是碗。"]
+			description: [
+				"现在被闪电杀死的海龟会掉落潜影壳而不是碗。"
+				""
+				"（顺便还帮ojang修了一个陈年老bug）"
+			]
 			id: "4FA5FC76A0E51A08"
 			tasks: [{
 				id: "210DD67E61F2F5FE"
 				item: "minecraft:shulker_shell"
 				type: "item"
 			}]
+			title: "闪电龟龟"
 			x: 12.0d
 			y: -2.0d
 		}

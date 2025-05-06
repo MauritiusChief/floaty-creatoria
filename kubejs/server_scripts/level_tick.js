@@ -1,6 +1,15 @@
 
 LevelEvents.tick(event => {
     const level = event.level;
+    const colorCodes = {
+        "white": 0,"orange": 1,"magenta": 2,"light_blue": 3,
+        "yellow": 4,"lime": 5,"pink": 6,"gray": 7,
+        "light_gray": 8,"cyan": 9,"purple": 10,"blue": 11,
+        "brown": 12,"green": 13,"red": 14,"black": 15,
+        "shulker_box": 16
+    }
+    const FrankensteinItems = [{Count:1,Slot:3,id:"minecraft:end_stone"},{Count:1,Slot:4,id:"minecraft:end_stone"},{Count:1,Slot:5,id:"minecraft:end_stone"},{Count:1,Slot:12,id:"minecraft:end_stone"},{Count:1,Slot:13,id:"minecraft:ender_pearl"},{Count:1,Slot:14,id:"minecraft:end_stone"},{Count:1,Slot:21,id:"minecraft:end_stone"},{Count:1,Slot:22,id:"minecraft:end_stone"},{Count:1,Slot:23,id:"minecraft:end_stone"}]
+    
 
     level.getEntities().forEach( entity => {
 
@@ -110,6 +119,39 @@ LevelEvents.tick(event => {
                     }
                 }
             )
+        }
+        // 弗兰肯斯坦式潜影贝
+        if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -62 && 
+            !entity.persistentData.getBoolean("shulker_triggered") &&
+            level.getBlock(entity.blockPosition().below().below()).id.includes("shulker_box") &&
+            level.getBlock(entity.blockPosition().below()).id == "minecraft:lightning_rod"
+        ) {
+            let shulkerBox = level.getBlock(entity.blockPosition().below().below())
+            let color = shulkerBox.id.split(":")[1].split("_shulker_box")[0] // 如果没有颜色那么 color 会得到 "shulker_box"
+            let shulkerData = shulkerBox.getEntityData()
+            // console.log(color)
+            // console.log(colorCodes[color])
+            console.log(shulkerData)
+            if (!shulkerData.Items) return // 潜影盒完全为空的情况
+            let summonShulker = FrankensteinItems.every( item => {
+                return shulkerData.Items.toArray().some( boxItem => {
+                    // console.log(boxItem.id == item.id)
+                    // console.log(boxItem.Slot == item.Slot)
+                    // console.log(boxItem.Count == item.Count)
+                    return (boxItem.id == item.id && boxItem.Slot == item.Slot && boxItem.Count == item.Count)
+                })
+            })
+            console.log(summonShulker)
+            if (!summonShulker) return
+            console.log("物品匹配，继续")
+            shulkerBox.set("air")
+            // 创建潜影贝
+            let shulkerEntity = level.createEntity('minecraft:shulker')
+            shulkerEntity.mergeNbt({Color: colorCodes[color]})
+            shulkerEntity.setPosition(entity.getX(), entity.getY(), entity.getZ())
+            shulkerEntity.spawn();
+            entity.persistentData.putBoolean("shulker_triggered", true)
+            return // 方块不可能同时是工作盆和潜影盒，所以和下方是互斥关系，可以直接return
         }
         // 继续处理工作盆闪电的部分
         if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -62 && 
