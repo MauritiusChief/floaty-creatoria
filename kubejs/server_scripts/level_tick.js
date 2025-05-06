@@ -100,6 +100,18 @@ LevelEvents.tick(event => {
         } 
         
         /**forEach处理闪电实体 */
+        // 麻了，替蠢驴擦屁股，闪电不会摧毁物品
+        if (entity.type == "minecraft:lightning_bolt") {
+            level.getEntitiesWithin(AABB.ofSize(entity.position(), 2, 1, 2)).forEach(
+                nearByEntity => {
+                    if (nearByEntity.type === "minecraft:item") {
+                        console.log(nearByEntity)
+                        nearByEntity.invulnerable = true
+                    }
+                }
+            )
+        }
+        // 继续处理工作盆闪电的部分
         if (entity.type == "minecraft:lightning_bolt" && entity.getBlockY() >= -62 && 
             !entity.persistentData.getBoolean("lava_triggered") &&
             level.getBlock(entity.blockPosition().below().below()).id == "create:basin" &&

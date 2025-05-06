@@ -562,6 +562,18 @@
 			x: 8.0d
 			y: 2.5d
 		}
+		{
+			dependencies: ["5F58E0F48C0F08A3"]
+			description: ["现在被闪电杀死的海龟会掉落潜影壳而不是碗。"]
+			id: "4FA5FC76A0E51A08"
+			tasks: [{
+				id: "210DD67E61F2F5FE"
+				item: "minecraft:shulker_shell"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -2.0d
+		}
 	]
 	title: "锻铁、雨水与熔岩"
 }
