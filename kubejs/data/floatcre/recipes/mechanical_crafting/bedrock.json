@@ -1,0 +1,31 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_block"
+    },
+    "B": {
+      "item": "minecraft:chiseled_polished_blackstone"
+    },
+    "C": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "Q": {
+      "item": "minecraft:chiseled_quartz_block"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "BQBQB",
+    "QCSCQ",
+    "BSNSB",
+    "QCSCQ",
+    "BQBQB"
+  ],
+  "result": {
+    "item": "minecraft:bedrock"
+  }
+}

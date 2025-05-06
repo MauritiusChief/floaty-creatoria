@@ -1,0 +1,29 @@
+{
+  "type": "create:compacting",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:bone_block"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "create:cinder_flour"
+    },
+    {
+      "item": "kubejs:huigu_alloy"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:ancient_debris"
+    }
+  ]
+}

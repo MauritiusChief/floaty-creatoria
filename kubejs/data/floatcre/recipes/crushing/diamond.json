@@ -1,0 +1,46 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:diamond_pickaxe"
+      },
+      {
+        "item": "minecraft:diamond_hoe"
+      },
+      {
+        "item": "minecraft:diamond_axe"
+      },
+      {
+        "item": "minecraft:diamond_sword"
+      },
+      {
+        "item": "minecraft:diamond_shovel"
+      },
+      {
+        "item": "minecraft:diamond_helmet"
+      },
+      {
+        "item": "minecraft:diamond_chestplate"
+      },
+      {
+        "item": "minecraft:diamond_leggings"
+      },
+      {
+        "item": "minecraft:diamond_boots"
+      },
+      {
+        "item": "farmersdelight:diamond_knife"
+      }
+    ]
+    
+  ],
+  "processingTime": 200,
+  "results": [
+    {
+      "chance": 0.1,
+      "count": 1,
+      "item": "minecraft:diamond"
+    }
+  ]
+}
