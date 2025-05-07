@@ -11,7 +11,7 @@ ServerEvents.recipes( event => {
 
 	['create:chocolate_bucket']
 	const discs = ["11", "13", "blocks", "cat", "chirp", "far", "mall", "mellohi", "stal", "strad", "wait", "ward"]
-	const disc_ingre = {"11": 'minecraft:tinted_glass', "13": 'minecraft:sea_lantern', "blocks": 'minecraft:magma_block', "cat": 'minecraft:charcoal', "chirp": 'minecraft:shulker_box', "far": 'supplementaries:jar_boat', "mall": 'minecraft:blue_ice', "mellohi": 'minecraft:shulker_box', "stal": 'minecraft:mud_bricks', "strad": 'create:brass_block', "wait": "create:chocolate", "ward": 'create:electron_tube'}
+	const disc_ingre = {"11": 'minecraft:tinted_glass', "13": 'minecraft:sea_lantern', "blocks": 'minecraft:magma_block', "cat": 'minecraft:charcoal', "chirp": 'minecraft:oxidized_copper', "far": 'supplementaries:jar_boat', "mall": 'minecraft:blue_ice', "mellohi": 'minecraft:shulker_box', "stal": 'minecraft:mud_bricks', "strad": 'create:brass_block', "wait": "create:chocolate", "ward": 'create:electron_tube'}
 	discs.forEach( disc => {
 		event.custom({
 			"type": "create:mechanical_crafting",

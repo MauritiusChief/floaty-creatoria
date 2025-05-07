@@ -114,7 +114,7 @@ LevelEvents.tick(event => {
             level.getEntitiesWithin(AABB.ofSize(entity.position(), 2, 1, 2)).forEach(
                 nearByEntity => {
                     if (nearByEntity.type === "minecraft:item") {
-                        console.log(nearByEntity)
+                        // console.log(nearByEntity)
                         nearByEntity.invulnerable = true
                     }
                 }
@@ -131,7 +131,7 @@ LevelEvents.tick(event => {
             let shulkerData = shulkerBox.getEntityData()
             // console.log(color)
             // console.log(colorCodes[color])
-            console.log(shulkerData)
+            // console.log(shulkerData)
             if (!shulkerData.Items) return // 潜影盒完全为空的情况
             let summonShulker = FrankensteinItems.every( item => {
                 return shulkerData.Items.toArray().some( boxItem => {
@@ -143,7 +143,7 @@ LevelEvents.tick(event => {
             })
             console.log(summonShulker)
             if (!summonShulker) return
-            console.log("物品匹配，继续")
+            // console.log("物品匹配，继续")
             shulkerBox.set("air")
             // 创建潜影贝
             let shulkerEntity = level.createEntity('minecraft:shulker')

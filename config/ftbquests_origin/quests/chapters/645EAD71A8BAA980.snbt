@@ -9,10 +9,10 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["{ftbquests.chapter.645EAD71A8BAA980.quest1.description1}"]
+			description: ["现在女巫会掉落烂苹果"]
 			id: "379CAA1E4B04B8D4"
 			size: 1.5d
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest1.subtitle}"
+			subtitle: "请不要随地乱扔垃圾"
 			tasks: [{
 				id: "44785AE356A48B61"
 				item: "kubejs:rotten_apple"
@@ -23,13 +23,13 @@
 		}
 		{
 			description: [
-				"{ftbquests.chapter.645EAD71A8BAA980.quest2.description1}"
+				"更具体来讲，手持水瓶右键泥土类的方块即可将其转化为泥巴。"
 				""
-				"{ftbquests.chapter.645EAD71A8BAA980.quest2.description2}"
+				"你可以通过钓鱼获得水瓶，或者击杀女巫获得空瓶再装水。"
 			]
 			icon: "minecraft:mud"
 			id: "6588C2E3E9A82451"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest2.subtitle}"
+			subtitle: "用水瓶向泥土中注水"
 			tasks: [{
 				id: "176EB139A761F347"
 				observe_type: 0
@@ -37,19 +37,19 @@
 				to_observe: "minecraft:mud"
 				type: "observation"
 			}]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest2.title}"
+			title: "陷入泥泞"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["6588C2E3E9A82451"]
 			description: [
-				"{ftbquests.chapter.645EAD71A8BAA980.quest3.description1}"
+				"将泥巴放在农夫乐事的砧板上并用铲子右键有概率在其中挖掘出黏土球。"
 				""
-				"{ftbquests.chapter.645EAD71A8BAA980.quest3.description2}"
+				"别把衣服弄脏了。"
 			]
 			id: "7BB7780F811A0BF4"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest3.subtitle}"
+			subtitle: "小小的空岛上挖呀挖"
 			tasks: [{
 				id: "69579770690F5EF9"
 				item: "minecraft:clay_ball"
@@ -64,13 +64,13 @@
 				"379CAA1E4B04B8D4"
 			]
 			description: [
-				"{ftbquests.chapter.645EAD71A8BAA980.quest4.description1}"
+				"用烂苹果右键花盆有1/8概率在其中种下一个橡树树苗。"
 				""
-				"{ftbquests.chapter.645EAD71A8BAA980.quest4.description2}"
+				"这是你在治疗僵尸村民前唯一获取苹果的途径。"
 			]
 			icon: "minecraft:flower_pot"
 			id: "7195685F32A0CF6C"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest4.subtitle}"
+			subtitle: "是苹果树吗？"
 			tasks: [
 				{
 					id: "5A09DFEC69728A41"
@@ -83,7 +83,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest4.title}"
+			title: "我种下一颗种子"
 			x: 2.5d
 			y: 0.0d
 		}
@@ -95,13 +95,13 @@
 			dependency_requirement: "one_completed"
 			icon: "minecraft:golden_apple"
 			id: "7D87916276AF8A9C"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest5.subtitle}"
+			subtitle: "远离不了一点"
 			tasks: [{
 				id: "39B7A7DEB5355444"
 				item: "minecraft:golden_apple"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest5.title}"
+			title: "僵尸科实习医生"
 			x: 5.5d
 			y: 0.0d
 		}
@@ -109,24 +109,24 @@
 			dependencies: ["1C0CCFEB9E3F9185"]
 			icon: "minecraft:brewing_stand"
 			id: "4020C2C83560F929"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest6.subtitle}"
+			subtitle: "自己酿造虚弱药水"
 			tasks: [{
 				id: "6C0822D70C7DC64E"
 				item: "minecraft:brewing_stand"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest6.title}"
+			title: "更爆肝？"
 			x: 6.0d
 			y: 1.5d
 		}
 		{
 			id: "300E1FA0FFFA5D53"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest7.subtitle}"
+			subtitle: "借用女巫的虚弱药水"
 			tasks: [{
 				id: "0BCC87E878422DC8"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest7.title}"
+			title: "更技巧？"
 			x: 6.0d
 			y: -1.5d
 		}
@@ -145,7 +145,7 @@
 		{
 			dependencies: ["7195685F32A0CF6C"]
 			id: "36158816E2D929BF"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest9.subtitle}"
+			subtitle: "医生远离我"
 			tasks: [{
 				id: "448AE7184FF1BF6D"
 				item: "minecraft:apple"
@@ -162,7 +162,7 @@
 				"45281E5F38F4034F"
 			]
 			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter.645EAD71A8BAA980.quest10.description1}"]
+			description: ["用金苹果对带有虚弱效果的僵尸村民右键，将其治愈。"]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -171,7 +171,7 @@
 				}
 			}
 			id: "60D57E48ACCC55C5"
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest10.subtitle}"
+			subtitle: "恭喜转正！"
 			tasks: [{
 				id: "003E1FC3232CB86E"
 				observe_type: 5
@@ -179,13 +179,13 @@
 				to_observe: "minecraft:villager"
 				type: "observation"
 			}]
-			title: "{ftbquests.chapter.645EAD71A8BAA980.quest10.title}"
+			title: "僵尸科医生"
 			x: 7.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["60D57E48ACCC55C5"]
-			description: ["{ftbquests.chapter.645EAD71A8BAA980.quest11.description1}"]
+			description: ["你已经证明了你强大的生产力与获得财富的能力。"]
 			id: "47D4946A13930709"
 			rewards: [{
 				count: 64
@@ -193,7 +193,7 @@
 				item: "minecraft:emerald"
 				type: "item"
 			}]
-			subtitle: "{ftbquests.chapter.645EAD71A8BAA980.quest11.subtitle}"
+			subtitle: "财源滚滚"
 			tasks: [{
 				count: 64L
 				id: "6744D9C90A706C82"
@@ -204,5 +204,5 @@
 			y: 0.0d
 		}
 	]
-	title: "{ftbquests.chapter.645EAD71A8BAA980.title}"
+	title: "病毒、食物与财富"
 }

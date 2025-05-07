@@ -10,20 +10,20 @@
 	quests: [
 		{
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest1.description1}"
+				"僵尸在被玩家杀死时，有很小概率产生特殊掉落物，铁锭就是其中之一。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest1.description2}"
-				"{ftbquests.chapter.1C993324EA740939.quest1.description3}"
+				"所以要想获得足够的铁锭，建造刷怪塔几乎不可避免。"
+				"除非你的运气非常好，或者你非常有耐心"
 			]
 			id: "69DCA2DF51CAC3EC"
 			size: 1.5d
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest1.subtitle}"
+			subtitle: "准备好考验你的耐心了吗？"
 			tasks: [{
 				id: "0CD42B8E8C498A49"
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest1.title}"
+			title: "铁器时代"
 			x: 4.0d
 			y: -2.0d
 		}
@@ -52,16 +52,16 @@
 		{
 			dependencies: ["19F1C5BC1CBC288E"]
 			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter.1C993324EA740939.quest4.description1}"]
+			description: ["……而溺尸在被玩家杀死时有概率掉落铜锭。"]
 			id: "23F6F6621E17C75A"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest4.subtitle}"
+			subtitle: "准备好再次考验你的耐心了吗？"
 			tasks: [{
 				count: 3L
 				id: "170157E065BE0F6A"
 				item: "minecraft:copper_ingot"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest4.title}"
+			title: "铜器时代"
 			x: 11.0d
 			y: -2.0d
 		}
@@ -70,9 +70,9 @@
 				"23F6F6621E17C75A"
 				"73129B751CF45A0C"
 			]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest5.description1}"]
+			description: ["避雷针下方的工作盆若装有圆石，被雷击时则会融化其变为40mB熔岩。"]
 			id: "5F58E0F48C0F08A3"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest5.subtitle}"
+			subtitle: "避雷针其实是引雷针"
 			tasks: [{
 				id: "6D05C9F09AB75FE9"
 				item: "minecraft:lightning_rod"
@@ -88,10 +88,10 @@
 				"69DCA2DF51CAC3EC"
 				"31590EDDEFA18C86"
 			]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest6.description1}"]
+			description: ["这怎么不是一种轻松放置呢？"]
 			icon: "create:schematicannon"
 			id: "659D2AAB564B04EF"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest6.subtitle}"
+			subtitle: "仅需一些火药"
 			tasks: [
 				{
 					id: "30C7B4FAD33300C7"
@@ -104,7 +104,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.chapter.1C993324EA740939.quest6.title}"
+			title: "轻松放置"
 			x: 5.5d
 			y: -4.0d
 		}
@@ -115,7 +115,7 @@
 				"162D7DDC3029BA44"
 			]
 			id: "6E4FFC1D2F91CFBD"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest7.subtitle}"
+			subtitle: "雷公助我！"
 			tasks: [{
 				id: "43A81306907124F6"
 				item: "minecraft:lava_bucket"
@@ -126,7 +126,7 @@
 		}
 		{
 			dependencies: ["69DCA2DF51CAC3EC"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest8.description1}"]
+			description: ["现在僵尸在被铁刀杀死时，其特殊掉落物（铁锭、胡萝卜和土豆）的掉率会大大提升。"]
 			id: "76D1828D92B292E9"
 			optional: true
 			rewards: [{
@@ -134,7 +134,7 @@
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest8.subtitle}"
+			subtitle: "胡萝卜？拿来！土豆？拿来！"
 			tasks: [{
 				id: "025BDBC1C2A337B6"
 				item: {
@@ -146,13 +146,13 @@
 				}
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest8.title}"
+			title: "砍瓜切菜"
 			x: 5.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["23F6F6621E17C75A"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest9.description1}"]
+			description: ["与僵尸类似，铜刀可增加溺尸掉落铜锭的概率。"]
 			id: "27E73009F0E1BFFF"
 			optional: true
 			rewards: [{
@@ -160,7 +160,7 @@
 				item: "minecraft:copper_ingot"
 				type: "item"
 			}]
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest9.subtitle}"
+			subtitle: "小心生锈"
 			tasks: [{
 				id: "21D1F795C2EBE88A"
 				item: {
@@ -182,9 +182,9 @@
 				"15BE259E449D52A3"
 			]
 			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter.1C993324EA740939.quest10.description1}"]
+			description: ["下雨时，露天放置的炼药锅会接到水。"]
 			id: "5BC829C70E7141EA"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest10.subtitle}"
+			subtitle: "下雨啦！"
 			tasks: [{
 				id: "2C44823EADACA3CC"
 				item: "minecraft:water_bucket"
@@ -194,9 +194,9 @@
 			y: -2.0d
 		}
 		{
-			description: ["{ftbquests.chapter.1C993324EA740939.quest11.description1}"]
+			description: ["火药可以用来装填蓝图大炮，或者制作烟花火箭。"]
 			id: "31590EDDEFA18C86"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest11.subtitle}"
+			subtitle: "艺术就是爆炸！"
 			tasks: [{
 				id: "4CA9486C33CC64CD"
 				item: "minecraft:gunpowder"
@@ -208,14 +208,14 @@
 		{
 			dependencies: ["31590EDDEFA18C86"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest12.description1}"
+				"当带有烟火之星的烟花火箭正好在256格以上位置的风向标下方自然爆炸（非碰撞导致爆炸）时，将会随机改变天气。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest12.description2}"
+				"若烟火之星的颜色包含&9&l蓝色&r&r、&b&l淡蓝色&r&r、&f&l白色&r&r时，将分别把天气固定切换为&9&l雷暴&r&r、&b&l下雨&r&r、&f&l晴天&r&r。"
 			]
 			icon: "supplementaries:wind_vane"
 			id: "15BE259E449D52A3"
 			optional: true
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest12.subtitle}"
+			subtitle: "天气之孙子"
 			tasks: [
 				{
 					id: "74D9FA69048370FD"
@@ -249,25 +249,25 @@
 						1
 						1
 					]
-					title: "{ftbquests.chapter.1C993324EA740939.quest12.task_2563178435923100284.title}"
+					title: "到达256格的空中"
 					type: "location"
 				}
 			]
-			title: "{ftbquests.chapter.1C993324EA740939.quest12.title}"
+			title: "祈雨"
 			x: 8.0d
 			y: -5.0d
 		}
 		{
 			dependencies: ["6E4FFC1D2F91CFBD"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest13.description1}"]
+			description: ["通过熔炉回收刷怪塔掉落的金装备可以获得金粒，但很显然在下界通过僵尸猪灵获取金粒更轻松。"]
 			id: "4839AFF613C1FF23"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest13.subtitle}"
+			subtitle: "浇筑而成"
 			tasks: [{
 				dimension: "minecraft:the_nether"
 				id: "264EC0D130C80481"
 				type: "dimension"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest13.title}"
+			title: "地狱之门"
 			x: 13.5d
 			y: -3.0d
 		}
@@ -287,12 +287,12 @@
 			dependencies: ["74221082C92738C3"]
 			dependency_requirement: "one_completed"
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest15.description1}"
+				"与僵尸类似，流浪者被玩家杀死时有小概率掉落锌锭。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest15.description2}"
+				"介于锌锭十分珍贵，不建议用锌来合成安山合金。"
 			]
 			id: "261D0F1CA51D5BCD"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest15.subtitle}"
+			subtitle: "机械动力？别急"
 			tasks: [{
 				id: "7E746B6E41F126C5"
 				item: "create:zinc_ingot"
@@ -319,14 +319,14 @@
 		}
 		{
 			dependencies: ["261D0F1CA51D5BCD"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest17.description1}"]
+			description: ["锌刀可增加流浪者掉落锌锭的概率。"]
 			id: "3302733E6DBC4496"
 			rewards: [{
 				id: "359527790E9AD049"
 				item: "create:zinc_ingot"
 				type: "item"
 			}]
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest17.subtitle}"
+			subtitle: "小心流浪者补锌过多变聪明"
 			tasks: [{
 				id: "45FCE960E36EE46B"
 				item: {
@@ -348,9 +348,9 @@
 			]
 			dependency_requirement: "one_completed"
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest18.description1}"
+				"骷髅在细雪中可以转变为流浪者。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest18.description2}"
+				"当然，找到生成流浪者的群系建造刷怪塔也不是不行。"
 			]
 			icon: {
 				Count: 1
@@ -360,7 +360,7 @@
 				}
 			}
 			id: "74221082C92738C3"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest18.subtitle}"
+			subtitle: "转化或刷怪？由你决定"
 			tasks: [{
 				id: "66E2B378A833E198"
 				observe_type: 5
@@ -368,14 +368,14 @@
 				to_observe: "minecraft:stray"
 				type: "observation"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest18.title}"
+			title: "危险流浪者"
 			x: 11.0d
 			y: -4.5d
 		}
 		{
 			dependencies: ["5BC829C70E7141EA"]
 			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter.1C993324EA740939.quest19.description1}"]
+			description: ["把僵尸泡在水里一段时间便会转化成溺尸……"]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -384,7 +384,7 @@
 				}
 			}
 			id: "19F1C5BC1CBC288E"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest19.subtitle}"
+			subtitle: "冷水澡有害健康"
 			tasks: [{
 				id: "539D580BEDE4B00E"
 				observe_type: 5
@@ -392,46 +392,46 @@
 				to_observe: "minecraft:drowned"
 				type: "observation"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest19.title}"
+			title: "观察溺尸"
 			x: 9.5d
 			y: -2.0d
 		}
 		{
-			description: ["{ftbquests.chapter.1C993324EA740939.quest20.description1}"]
+			description: ["&o流浪者在雪原、冰刺之地、冻河、冻洋、冰冻深海中有80%的概率会取代露天的骷髅生成。在冻洋中流浪者可在高度为60-66之间的地面上生成。&r"]
 			id: "419E745BB43E1268"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest20.subtitle}"
+			subtitle: "摘自维基百科"
 			tasks: [{
 				id: "035020DBD59887E4"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest20.title}"
+			title: "寻找流浪者"
 			x: 10.0d
 			y: -5.5d
 		}
 		{
 			dependencies: ["019DCB598A718BDD"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest21.description1}"
+				"你若真的不靠僵尸猪灵获取金粒……"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest21.description2}"
+				"我害怕你，刷怪的人。"
 			]
 			id: "78CA4E32CAA8ED23"
 			optional: true
 			size: 0.5d
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest21.subtitle}"
+			subtitle: "毅力惊人"
 			tasks: [{
 				id: "3F40BCCC5191EF04"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest21.title}"
+			title: "（烧）炼金（装备）"
 			x: 17.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["5BC829C70E7141EA"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest22.description1}"]
+			description: ["你应该懂鱼竿在空岛生存中的含金量吧？"]
 			id: "12C6B8F429992C6A"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest22.subtitle}"
+			subtitle: "忽复乘舟梦日边"
 			tasks: [{
 				id: "036284F9EEA7433E"
 				item: {
@@ -450,9 +450,9 @@
 		{
 			dependencies: ["4839AFF613C1FF23"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest23.description1}"
+				"这里产出的烈焰人与凋零骷髅都是重要的的资源。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest23.description2}"
+				"当然也异常危险。"
 			]
 			icon: {
 				Count: 1
@@ -462,19 +462,19 @@
 				}
 			}
 			id: "3A5474FCF8C1FE52"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest23.subtitle}"
+			subtitle: "找到下界要塞"
 			tasks: [{
 				id: "2ECB59F60D58B39B"
 				structure: "#minecraft:fortress"
 				type: "structure"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest23.title}"
+			title: "阴森恐怖"
 			x: 13.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["3A5474FCF8C1FE52"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest24.description1}"]
+			description: ["目前利用烈焰人的唯一方式是获取其掉落物，未来机械动力会提供方式压榨它们……"]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -483,23 +483,23 @@
 				}
 			}
 			id: "1C0CCFEB9E3F9185"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest24.subtitle}"
+			subtitle: "找到烈焰人……然后击杀"
 			tasks: [{
 				entity: "minecraft:blaze"
 				id: "135D90CA4FB9CD4D"
 				type: "kill"
 				value: 1L
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest24.title}"
+			title: "御用工具人"
 			x: 15.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5BC829C70E7141EA"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest25.description1}"
+				"守卫者在烧死时不掉落海晶砂粒，而是掉落下界石英。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest25.description2}"
+				"而下界石英……可以用来合成安山岩。"
 			]
 			icon: {
 				Count: 1
@@ -509,7 +509,7 @@
 				}
 			}
 			id: "54DFFA21D6F0AFFB"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest25.subtitle}"
+			subtitle: "获取石英"
 			tasks: [
 				{
 					id: "0EA1D392D5389F36"
@@ -528,31 +528,31 @@
 					type: "structure"
 				}
 			]
-			title: "{ftbquests.chapter.1C993324EA740939.quest25.title}"
+			title: "燃烧的海洋"
 			x: 9.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["54DFFA21D6F0AFFB"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest26.description1}"
+				"将安山岩和铁粒或者锌粒放入合成台，进入机械动力时代吧！"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest26.description2}"
+				"介于锌锭十分珍贵，不建议用锌来合成安山合金。"
 			]
 			id: "2A702DDD55410F84"
-			subtitle: "{ftbquests.chapter.1C993324EA740939.quest26.subtitle}"
+			subtitle: "一步之遥"
 			tasks: [{
 				id: "726B2CA8A0A63B2C"
 				item: "minecraft:andesite"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest26.title}"
+			title: "安第斯山脉的荣耀"
 			x: 11.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["12C6B8F429992C6A"]
-			description: ["{ftbquests.chapter.1C993324EA740939.quest27.description1}"]
+			description: ["在海洋群系中钓鱼将有概率获得海带."]
 			id: "6BF94C7056F30193"
 			tasks: [{
 				id: "04E41A77A9CE5C88"
@@ -565,9 +565,9 @@
 		{
 			dependencies: ["5F58E0F48C0F08A3"]
 			description: [
-				"{ftbquests.chapter.1C993324EA740939.quest28.description1}"
+				"现在被闪电杀死的海龟会掉落潜影壳而不是碗。"
 				""
-				"{ftbquests.chapter.1C993324EA740939.quest28.description2}"
+				"（顺便还帮ojang修了一个陈年老bug）"
 			]
 			id: "4FA5FC76A0E51A08"
 			tasks: [{
@@ -575,10 +575,10 @@
 				item: "minecraft:shulker_shell"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter.1C993324EA740939.quest28.title}"
+			title: "闪电龟龟"
 			x: 12.0d
 			y: -2.0d
 		}
 	]
-	title: "{ftbquests.chapter.1C993324EA740939.title}"
+	title: "锻铁、雨水与熔岩"
 }
