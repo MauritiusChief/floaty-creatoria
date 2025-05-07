@@ -26,6 +26,7 @@ mods/*.disabled
 
 !resourcepacks/
 resourcepacks/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip
+resourcepacks/*.disabled
 
 !.gitignore
 !README.md
